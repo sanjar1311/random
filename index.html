@@ -9,7 +9,25 @@
 </head>
 <body>
 
-    <div class="container text-center">Lorem ipsum dolor sit amet.</div>
+    <div class="container">
+        <form class="js-form jumbotron d-flex flex-column align-items-center mt-5" action="https://echo.htmlacademy.ru" method="POST">
+            <h2 class="my-4">Kompyuter o'ylagan sonni topa olasizmi?</h2>
+            <div class="d-flex my-4 align-items-center">
+                <p class="m-0 mr-3">1 va 100 orasidagi son kiriting: </p>
+                <input class="js-input mr-3 form-control w-25" type="number" placeholder="1" required>
+                <button class="js-btn btn btn-secondary">Tekshirish</button>
+            </div>
+            <div class="js-warning-output"></div>
+            <div class="d-flex my-3">
+                <p class="h4 m-0">Urinishlar soni: <span class="js-urinishlar-soni">6</span> ta</p>
+            </div>
+            <div class="d-flex my-3">
+                <p class="h4 m-0">Siz kiritgan son: </p>
+                <output class="js-urinishlar"></output>
+            </div>
+            <a href="index.html" class="btn btn-warning my-4">Qaytadan boshlash</a>
+        </form>
+    </div>
 
 
     <script src="js/jquery-3.5.1.min.js"></script>

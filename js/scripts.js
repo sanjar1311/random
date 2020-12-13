@@ -10,20 +10,27 @@ var arrrey = [];
 
 elForm.addEventListener('submit', function(evt) {
   evt.preventDefault();
+  var elUserNumber = Number(elInput.value);
+
+  //user togri topsa
+  if(elUserNumber === compNumber){
+    elInput.disabled = true;
+    elBtn.disabled = true;
+    elOutput.textContent = `Topdingiz!!!`;
+    return;
+  }
 
   // imkoniyatlar soni
-
   elUrinishlarSoni.textContent = --UrinishlarSoniO;
   if(UrinishlarSoniO === 0) {
-    elInput.remove();
-    elBtn.remove();
+    elInput.disabled = true;
+    elBtn.disabled = true;
     elOutput.textContent = 'Qayta Urinib Koring...';
     return;
   }
 
 
 
-  var elUserNumber = Number(elInput.value);
   elUrinishlarOutputArray.classList.add('h4');
 
   // array

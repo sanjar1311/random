@@ -17,6 +17,7 @@ elForm.addEventListener('submit', function(evt) {
     elInput.disabled = true;
     elBtn.disabled = true;
     elOutput.textContent = `Topdingiz!!!`;
+    elInput.value = '';
     return;
   }
 
@@ -26,9 +27,9 @@ elForm.addEventListener('submit', function(evt) {
     elInput.disabled = true;
     elBtn.disabled = true;
     elOutput.textContent = 'Qayta Urinib Koring...';
+    elInput.value = '';
     return;
   }
-
 
 
   elUrinishlarOutputArray.classList.add('h4');
@@ -41,10 +42,13 @@ elForm.addEventListener('submit', function(evt) {
 
 
   if(elUserNumber > compNumber) {
-    elOutput.textContent = "Kichikroq son kiriting";
+    elOutput.textContent = "Kichikroq son kiriting...";
+    elInput.value = '';
   }else if (elUserNumber < compNumber) {
-    elOutput.textContent = "Kottaro son kiriting";
+    elOutput.textContent = "Kottaro son kiriting...";
+    elInput.value = '';
   }else if ( elUserNumber === compNumber) {
     elOutput.textContent = "Topdingiz";
+    elInput.value = '';
   }
 });
